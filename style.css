@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Courier New", monospace;
+    color: #f8f3e9;
+    background-color: #1a1510;
+    background-image:
+        url("https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+header {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: rgba(15, 10, 7, 0.85);
+    border-bottom: 2px solid #000;
+}
+
+.band-name h1 {
+    font-size: 3rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+nav {
+    margin-top: 5px;
+}
+
+.nav-list {
+    list-style: none;
+    display: inline-flex;
+    gap: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #f8f3e9;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-bottom: 4px solid #000;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top,
+        transparent 0%,
+        rgba(0, 0, 0, 0.9) 60%);
+}
+
+.hero-overlay {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 3px #000;
+}
+
+.hero-btn {
+    background-color: #d21010;
+    border: none;
+    padding: 8px 20px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.hero-btn:hover {
+    background-color: #ff3838;
+}
+
+main {
+    background-color: rgba(15, 10, 7, 0.9);
+}
+
+.content-section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 1px solid #3b3228;
+}
+
+.content-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.content-section p {
+    margin-bottom: 10px;
+}
+
+.tour-list,
+.music-list {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.signup-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.signup-section input {
+    padding: 8px;
+    border-radius: 0;
+    border: 1px solid #3b3228;
+    background-color: #1b1510;
+    color: #f8f3e9;
+}
+
+.signup-section input:focus {
+    outline: 1px solid #f8f3e9;
+}
+
+.form-btn {
+    width: 140px;
+    padding: 8px 0;
+    border: none;
+    background-color: #d21010;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.form-btn:hover {
+    background-color: #ff3838;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 10px;
+    background-color: #0d0907;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+    .band-name h1 {
+        font-size: 2.1rem;
+        letter-spacing: 0.18em;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero {
+        height: 280px;
+    }
+
+    .hero-text {
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 0 10px;
+    }
+}

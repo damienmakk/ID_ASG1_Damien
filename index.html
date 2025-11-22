@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanye West | Official Fan Page</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+
+    <header id="home">
+        <div class="band-name">
+            <h1>KANYE WEST</h1>
+        </div>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#news">NEWS</a></li>
+                <li><a href="#tour">TOUR</a></li>
+                <li><a href="#music">MUSIC</a></li>
+                <li><a href="#signup">SIGN-UP</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay">
+            <p class="hero-text">New Album Out Now</p>
+            <button class="hero-btn"
+                    onclick="alert('Listening')">
+                Listen Now
+            </button>
+        </div>
+    </section>
+
+    <main>
+        <section id="news" class="content-section">
+            <h2>News</h2>
+            <p>
+                News
+            </p>
+        </section>
+
+        <section id="tour" class="content-section">
+            <h2>Tour Dates</h2>
+            <ul class="tour-list">
+                <li><strong>Singapore</strong> – Marina Bay • 14 Dec 2025</li>
+                <li><strong>Tokyo</strong> – Tokyo Dome • 20 Dec 2025</li>
+            </ul>
+        </section>
+
+        <section id="music" class="content-section">
+            <h2>Music</h2>
+            <p>Some Kanye musics you know:</p>
+            <ul class="music-list">
+                <li>I Wonder</li>
+                <li>God Is</li>
+                <li>Heartless</li>
+            </ul>
+        </section>
+
+        <section id="signup" class="content-section signup-section">
+            <h2>Sign-Up</h2>
+            <p>Join the mailing list to get updates on music and shows.</p>
+
+            <form>
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Your name" required />
+
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="you@example.com" required />
+
+                <button type="submit" class="form-btn">
+                    Join Now
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Damien</p>
+    </footer>
 </body>
 </html>
