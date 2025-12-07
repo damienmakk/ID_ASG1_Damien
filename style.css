@@ -4,187 +4,342 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: "Courier New", monospace;
-    color: #f8f3e9;
-    background-color: #1a1510;
-    background-image:
-        url("https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg");
-    background-size: cover;
-    background-attachment: fixed;
-}
-header {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    background-color: rgba(15, 10, 7, 0.85);
-    border-bottom: 2px solid #000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: white;
+    color: #111;
 }
 
-.band-name h1 {
-    font-size: 3rem;
-    letter-spacing: 0.35em;
+/* header */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #e6e6e6;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    display: inline-block;
-    margin-bottom: 10px;
+    font-size: 0.9rem;
 }
 
-nav {
-    margin-top: 5px;
+.nav {
+    display: block;
 }
 
 .nav-list {
     list-style: none;
-    display: inline-flex;
-    gap: 20px;
+    display: flex;
+    gap: 32px;
+    font-size: 0.9rem;
 }
 
 .nav-list a {
     text-decoration: none;
-    color: #f8f3e9;
-    font-size: 0.9rem;
-    letter-spacing: 0.2em;
+    color: #111;
 }
 
 .nav-list a:hover {
     text-decoration: underline;
 }
 
+.nav-toggle {
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.nav-line {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #111;
+    margin: 3px 0;
+}
+
+/* tagline */
+
+.tagline {
+    background-color: #111;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+}
+
+/* sections */
+
+.section {
+    padding: 40px 0;
+}
+
+.section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+}
+
+/* hero */
+
 .hero {
-    height: 350px;
+    min-height: 100vh;
+    background-image: url("images/giphy.gif");
     background-size: cover;
     background-position: center;
-    position: relative;
-    border-bottom: 4px solid #000;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at top,
-        transparent 0%,
-        rgba(0, 0, 0, 0.9) 60%);
-}
-
-.hero-overlay {
-    position: relative;
-    height: 100%;
+    background-repeat: no-repeat;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.hero-text {
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-    text-shadow: 0 0 3px #000;
-}
-
-.hero-btn {
-    background-color: #d21010;
-    border: none;
-    padding: 8px 20px;
+.hero-inner {
+    text-align: center;
+    padding: 32px 24px;
+    background: rgba(0, 0, 0, 0.45);
     color: #fff;
-    font-weight: bold;
+    border-radius: 8px;
+}
+
+.hero-inner h1 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+
+
+/* buttons */
+
+.primary-btn,
+.secondary-btn {
+    border: 1px solid #111;
+    background-color: #fff;
+    color: #111;
+    padding: 8px 26px;
+    font-size: 0.9rem;
     cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
 }
 
-.hero-btn:hover {
-    background-color: #ff3838;
+.primary-btn:hover,
+.secondary-btn:hover {
+    background-color: #111;
+    color: #fff;
 }
 
-main {
-    background-color: rgba(15, 10, 7, 0.9);
+/* albums */
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
 }
 
-.content-section {
-    padding: 40px 20px;
-    max-width: 800px;
+.album-card {
+    text-align: center;
+}
+
+.album-cover {
+    background-color: #d9d9d9;
+    height: 140px;
+    margin-bottom: 10px;
+}
+
+/* videos */
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.video-placeholder {
+    background-color: #d9d9d9;
+    height: 140px;
+}
+
+/* tour block */
+
+.tour-section {
+    background-color: #dedede;
+}
+
+.tour-inner {
+    max-width: 1100px;
     margin: 0 auto;
-    border-bottom: 1px solid #3b3228;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
 }
 
-.content-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
+/* circles */
+
+.circles-section {
+    background-color: #fdfdfd;
 }
 
-.content-section p {
-    margin-bottom: 10px;
+.circles-inner {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.tour-list,
-.music-list {
-    margin-left: 20px;
-    margin-top: 10px;
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
 }
 
-.signup-section form {
+/* signup */
+
+.signup-section {
+    background-color: #ffffff;
+}
+
+.signup-inner {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.signup-inner h2 {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+}
+
+.signup-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+}
+
+.signup-form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 15px;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
-.signup-section input {
-    padding: 8px;
-    border-radius: 0;
-    border: 1px solid #3b3228;
-    background-color: #1b1510;
-    color: #f8f3e9;
-}
-
-.signup-section input:focus {
-    outline: 1px solid #f8f3e9;
-}
-
-.form-btn {
-    width: 140px;
-    padding: 8px 0;
-    border: none;
-    background-color: #d21010;
-    color: #fff;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-}
-
-.form-btn:hover {
-    background-color: #ff3838;
-}
-
-footer {
-    text-align: center;
-    padding: 15px 10px;
-    background-color: #0d0907;
+.signup-form label {
     font-size: 0.8rem;
 }
 
-@media (max-width: 600px) {
-    .band-name h1 {
-        font-size: 2.1rem;
-        letter-spacing: 0.18em;
+.signup-form input {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+}
+
+.signup-form input:focus {
+    outline: 1px solid #111;
+}
+
+.signup-form .primary-btn {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.form-message {
+    font-size: 0.8rem;
+    min-height: 1.1em;
+    margin-top: 4px;
+}
+
+.form-message.success {
+    color: #1c7c2f;
+}
+
+.form-message.error {
+    color: #b00020;
+}
+
+.social-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-square {
+    width: 18px;
+    height: 18px;
+    background-color: #d9d9d9;
+}
+
+/* footer */
+
+.site-footer {
+    text-align: center;
+    padding: 16px 10px;
+    font-size: 0.8rem;
+    background-color: #e6e6e6;
+    border-top: 1px solid #d3d3d3;
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 56px;
+        background-color: #e6e6e6;
+        border-top: 1px solid #d3d3d3;
+        display: none;
+    }
+
+    .nav.open {
+        display: block;
     }
 
     .nav-list {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        padding: 10px 20px 14px;
         gap: 10px;
     }
 
-    .hero {
-        height: 280px;
+    .album-grid,
+    .video-grid {
+        grid-template-columns: 1fr;
     }
 
-    .hero-text {
-        font-size: 1.2rem;
-        text-align: center;
-        padding: 0 10px;
+    .circles-inner {
+        justify-content: center;
+    }
+
+    .circle {
+        width: 90px;
+        height: 90px;
     }
 }

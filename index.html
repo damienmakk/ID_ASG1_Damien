@@ -3,83 +3,112 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kanye West | Official Fan Page</title>
+    <title>YE WORLD | Kanye West</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-    <header id="home">
-        <div class="band-name">
-            <h1>KANYE WEST</h1>
-        </div>
-
-        <nav>
+<header class="site-header" id="top">
+    <div class="header-inner">
+        <div class="logo">YE WORLD</div>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="nav-line"></span>
+            <span class="nav-line"></span>
+            <span class="nav-line"></span>
+        </button>
+        <nav class="nav">
             <ul class="nav-list">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#news">NEWS</a></li>
-                <li><a href="#tour">TOUR</a></li>
-                <li><a href="#music">MUSIC</a></li>
-                <li><a href="#signup">SIGN-UP</a></li>
+                <li><a href="#shows">Shows</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
-    <section class="hero">
-        <div class="hero-overlay">
-            <p class="hero-text">New Album Out Now</p>
-            <button class="hero-btn"
-                    onclick="alert('Listening')">
-                Listen Now
-            </button>
+<section class="tagline">
+    <p>Run away as fast as you can.</p>
+</section>
+
+<main>
+    <section class="hero" id="shop">
+    <div class="hero-inner">
+        <h1>Kanye West</h1>
+        <button class="primary-btn" id="shop-now-btn">Shop Now</button>
+    </div>
+</section>
+
+    <section class="section" id="music">
+        <div class="section-inner">
+            <h2 class="section-title">Albums</h2>
+            <div class="album-grid">
+                <article class="album-card">
+                    <div class="album-cover"></div>
+                    <h3>Album One</h3>
+                </article>
+                <article class="album-card">
+                    <div class="album-cover"></div>
+                    <h3>Album Two</h3>
+                </article>
+                <article class="album-card">
+                    <div class="album-cover"></div>
+                    <h3>Album Three</h3>
+                </article>
+            </div>
         </div>
     </section>
 
-    <main>
-        <section id="news" class="content-section">
-            <h2>News</h2>
-            <p>
-                News
-            </p>
-        </section>
+    <section class="section" id="videos">
+        <div class="section-inner">
+            <h2 class="section-title">Videos</h2>
+            <div class="video-grid">
+                <div class="video-placeholder"></div>
+                <div class="video-placeholder"></div>
+                <div class="video-placeholder"></div>
+            </div>
+        </div>
+    </section>
 
-        <section id="tour" class="content-section">
-            <h2>Tour Dates</h2>
-            <ul class="tour-list">
-                <li><strong>Singapore</strong> – Marina Bay • 14 Dec 2025</li>
-                <li><strong>Tokyo</strong> – Tokyo Dome • 20 Dec 2025</li>
-            </ul>
-        </section>
+    <section class="section tour-section" id="shows">
+        <div class="tour-inner">
+            <button class="secondary-btn" id="view-dates-btn">View All Dates</button>
+        </div>
+    </section>
 
-        <section id="music" class="content-section">
-            <h2>Music</h2>
-            <p>Some Kanye musics you know:</p>
-            <ul class="music-list">
-                <li>I Wonder</li>
-                <li>God Is</li>
-                <li>Heartless</li>
-            </ul>
-        </section>
+    <section class="section circles-section">
+        <div class="circles-inner">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </section>
 
-        <section id="signup" class="content-section signup-section">
-            <h2>Sign-Up</h2>
-            <p>Join the mailing list to get updates on music and shows.</p>
-
-            <form>
-                <label for="name">Name</label>
-                <input id="name" type="text" placeholder="Your name" required />
-
+    <section class="section signup-section" id="contact">
+        <div class="signup-inner">
+            <h2>Kanye West</h2>
+            <p class="signup-subtitle">Sign Up for Updates</p>
+            <form class="signup-form" id="signup-form">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" required />
                 <label for="email">Email</label>
-                <input id="email" type="email" placeholder="you@example.com" required />
-
-                <button type="submit" class="form-btn">
-                    Join Now
-                </button>
+                <input type="email" id="email" required />
+                <button type="submit" class="primary-btn">Sign Up</button>
+                <p class="form-message" id="form-message"></p>
             </form>
-        </section>
-    </main>
+            <div class="social-row">
+                <div class="social-square"></div>
+                <div class="social-square"></div>
+                <div class="social-square"></div>
+            </div>
+        </div>
+    </section>
+</main>
 
-    <footer>
-        <p>© 2025 Damien</p>
-    </footer>
+<footer class="site-footer">
+    <p>© 2025 YE WORLD · Kanye West fan project for school only.</p>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
